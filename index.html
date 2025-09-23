@@ -5,67 +5,136 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Harshil's Page</title>
   <style>
+    /* Base styles */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #fff;
-      color: #222;
+      background: #ffffff;
+      color: #222222;
       margin: 0;
       padding: 20px;
       max-width: 900px;
       margin-left: auto;
       margin-right: auto;
+      line-height: 1.6;
+      font-size: 16px;
     }
+
+    /* Header */
     header {
-      border-bottom: 2px solid #0077cc;
-      margin-bottom: 20px;
+      border-bottom: 3px solid #0077cc;
+      margin-bottom: 30px;
       padding-bottom: 10px;
+      text-align: center;
     }
+
     header h1 {
       color: #0077cc;
-      font-weight: 700;
+      font-weight: 800;
+      font-size: 2.8rem;
       margin: 0;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-family: 'Segoe UI Black', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    section {
-      margin-bottom: 40px;
-    }
-    h2 {
+
+    /* Section Titles */
+    section h2 {
       color: #004466;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 5px;
+      border-bottom: 2px solid #cccccc;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: 0.5px;
     }
-    .vocab-list {
+
+    /* Paragraphs */
+    p {
+      max-width: 720px;
+      margin-bottom: 20px;
+      color: #333333;
+    }
+
+    /* Vocabulary List */
+    ul.vocab-list {
       list-style-type: none;
-      padding: 0;
+      padding-left: 0;
+      max-width: 720px;
+      margin-bottom: 25px;
     }
-    .vocab-list li {
-      margin-bottom: 10px;
+
+    ul.vocab-list li {
+      margin-bottom: 12px;
       line-height: 1.4;
+      font-size: 1rem;
+      color: #111111;
+      border-left: 4px solid #0077cc;
+      padding-left: 12px;
+      background-color: #f9faff;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
     }
+
+    ul.vocab-list li:hover {
+      background-color: #e0f0ff;
+    }
+
+    /* Images */
     img {
       max-width: 100%;
       height: auto;
       display: block;
-      margin: 15px 0;
-      border: 1px solid #ccc;
-      border-radius: 6px;
+      margin: 15px 0 30px 0;
+      border: 1px solid #cccccc;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 119, 204, 0.15);
+      transition: box-shadow 0.3s ease;
     }
+
+    img:hover {
+      box-shadow: 0 4px 12px rgba(0, 119, 204, 0.35);
+    }
+
+    /* Video Container */
     .video-container {
       position: relative;
-      padding-bottom: 56.25%; /* 16:9 */
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
       height: 0;
       overflow: hidden;
-      max-width: 100%;
+      max-width: 720px;
+      margin: 0 auto 40px auto;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.15);
       background: #000;
-      border-radius: 6px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.2);
     }
+
     .video-container iframe {
       position: absolute;
-      top:0;
-      left:0;
+      top: 0; left: 0;
       width: 100%;
       height: 100%;
-      border: 0;
+      border: none;
+      border-radius: 10px;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      body {
+        padding: 15px 10px;
+        font-size: 15px;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      section h2 {
+        font-size: 1.4rem;
+      }
+
+      ul.vocab-list li {
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
@@ -111,6 +180,12 @@
   <div class="video-container">
     <iframe src="https://www.youtube.com/embed/7_LPdttKXPc" title="How the Internet Works" allowfullscreen></iframe>
   </div>
+</section>
+
+<section>
+  <h2>Online Privacy</h2>
+  <p>When you browse the internet, websites often collect personal data using cookies and trackers. Cookies help websites remember your preferences, but trackers can follow your activity across sites. Protecting your personal data is important to keep your information safe and private.</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Privacy_illustration.svg/512px-Privacy_illustration.svg.png" alt="Online Privacy Illustration" />
 </section>
 
 </body>
